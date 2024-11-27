@@ -3,7 +3,7 @@ using namespace std;
 
 // Bitwise << (left shift) operator "<<"
 /* Let say for  any number n
-if we write n << i
+if we write n << i (it can also be seen as [n multiplied by 2 to the power i])
 means n shifted towards left i times 
 For Example :-
 let say 4 << 1
