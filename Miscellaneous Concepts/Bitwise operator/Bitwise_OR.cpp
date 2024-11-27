@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Bitwise OR operator --->>>   &
+// Bitwise OR operator --->>>   |
 int main() {
     int a, b;
     cout << "Enter 1st number: ";
