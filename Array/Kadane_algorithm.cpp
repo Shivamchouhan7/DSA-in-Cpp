@@ -2,11 +2,15 @@
 #include<climits>
 using namespace std;
 /* Print maximun subarray sum by using kadane's algorithm */
-/* kadane's algorithm not include negative value in the sum 
-because it reduces the maximum sum of that array and 
-Negative sums won't contribute to a maximum subarray ,
-whenever the currentsum becomes -ve it re assing currentsum=0 
-(except for negative integer array where max sum is negative ) */
+/*
+Kadane's Algorithm: 
+Find the maximum sum of a contiguous subarray within a one-dimensional array of numbers.
+Key Idea:
+- Avoid adding negative sums to the result since they decrease the overall maximum sum.
+- Reset the current sum to 0 if it becomes negative.
+
+Time Complexity: O(n)
+*/
 int main() {
     
     int arr[5] = {1, -2, 3, 4, 5};
