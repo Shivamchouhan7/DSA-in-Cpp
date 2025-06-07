@@ -19,7 +19,7 @@ void POA(vector<int> &vec){
     int suffix=1;
     for(int i=n-2;i>=0;i--){
         suffix*=ans[i+1];
-        vec[i]*=suffix;;
+        vec[i]*=suffix;
     }
     
 }
