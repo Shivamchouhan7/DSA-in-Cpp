@@ -9,3 +9,9 @@
 **Problem Link**: [LeetCode - Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)  
 **Difficulty**: Medium  
 **Tags**: Binary Search, Array
+
+# 🧩 Single Element in a Sorted Array
+
+**Problem Link**: [LeetCode - Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/)
+**Difficulty**: Medium  
+**Tags**: Binary Search, Array
