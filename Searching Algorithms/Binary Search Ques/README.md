@@ -18,7 +18,7 @@
 
 # 🔍 Allocate Minimum Number of Pages Or Book Allocation Problem
 
-**Problem Link**: GFG - Allocate Minimum Number of Pages
+**Problem Link**: [GFG - Allocate Minimum Number of Pages](https://www.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1)
 **Difficulty**: Medium
 **Tags**: Binary Search, Greedy, Arrays, Allocation Problem
 
