@@ -15,3 +15,10 @@
 **Problem Link**: [LeetCode - Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/)
 **Difficulty**: Medium  
 **Tags**: Binary Search, Array
+
+# 🔍 Allocate Minimum Number of Pages Or Book Allocation Problem
+
+**Problem Link**: GFG - Allocate Minimum Number of Pages
+**Difficulty**: Medium
+**Tags**: Binary Search, Greedy, Arrays, Allocation Problem
+
