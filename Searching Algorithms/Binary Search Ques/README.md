@@ -22,3 +22,8 @@
 **Difficulty**: Medium
 **Tags**: Binary Search, Greedy, Arrays, Allocation Problem
 
+# 🎨 Painter's Partition Problem
+**Problem Link**: [HackerEarth – Painter’s Partition](https://www.hackerearth.com/problem/algorithm/painters-partition/)
+**Difficulty**: Medium
+**Tags**: Binary Search, Greedy, Arrays
+
