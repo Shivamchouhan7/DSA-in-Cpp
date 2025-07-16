@@ -27,3 +27,9 @@
 **Difficulty**: Medium
 **Tags**: Binary Search, Greedy, Arrays
 
+# 🐄 Aggressive Cows
+
+**Problem Link**: [SPOJ - Aggressive Cows](https://www.spoj.com/problems/AGGRCOW/)  
+**Difficulty**: Medium  
+**Topic**: Binary Search,Greedy,Array ,Search on Number
+
