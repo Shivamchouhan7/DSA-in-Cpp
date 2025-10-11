@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     // Map is a key-value pair container
-    // It stores unique keys in sorted order (by default ascending order)
+    // It stores unique keys in sorted order (ascending by default)
     map<string, int> m; // key: string, value: int
 
     // Inserting values
@@ -15,37 +15,40 @@ int main() {
     m["Watch"] = 50;
 
     // Iterating through map
+    cout << "Initial map:\n";
     for (auto p : m) {
         cout << p.first << " " << p.second << endl;
     }
-    cout<<endl;
-    // To insert key value pair in map 
-    m.insert({"Camera",25});
+    cout << endl;
 
-    // Similarly by emplace (we not need to create object)
-    m.emplace("Book",55);
+    // Insert using insert()
+    m.insert({"Camera", 25});
 
-    //To erase we have to pass key 
+    // Insert using emplace() (faster, constructs in-place)
+    m.emplace("Book", 55);
+
+    // Erase element by key
     m.erase("Tv");
 
     // Iterating through map again
+    cout << "After insertions and erase:\n";
     for (auto p : m) {
         cout << p.first << " " << p.second << endl;
     }
-cout<<endl;
+    cout << endl;
 
-    // count 
-    cout<<"count = "<<m.count("Laptop")<<endl;
+    // Count — returns 1 if key exists, else 0
+    cout << "count(\"Laptop\") = " << m.count("Laptop") << endl;
 
-    //value stored by laptop
-    cout<<"laptop ="<<m["Laptop"]<<endl;
+    // Accessing value by key
+    cout << "Laptop = " << m["Laptop"] << endl;
 
-    // to find any key 
-    if(m.find("Camera") != m.end()){
-        cout<<"Found\n";
+    // Finding a key
+    if (m.find("Camera") != m.end()) {
+        cout << "Found\n";
+    } else {
+        cout << "Not found\n";
     }
-    else{
-        cout<<"not found\n";
-    }
+
     return 0;
 }
