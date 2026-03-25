@@ -107,7 +107,7 @@ DSA-in-Cpp/
 | `function01` | Basic function usage |
 | `pass_by_value` | Pass by value vs reference |
 | `factorial` | Factorial using functions |
-| `sum_of_digits` | Sum of digits of a number |
+| `01_sum_of_digits.cpp` | Sum of digits of a number |
 | `nCr` | Combinations formula (nCr) |
 
 ---
