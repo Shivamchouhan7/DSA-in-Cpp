@@ -18,8 +18,8 @@ void findallcombination(vector<int> & vec,int i,int tar,vector<vector<int>> &ans
     }
     //pick the element
     comb.push_back(vec[i]);
+    findallcombination(vec,i+1,tar-vec[i],ans,comb);
     findallcombination(vec,i,tar-vec[i],ans,comb);
-    findallcombination(vec,i-1,tar-vec[i],ans,comb);
     comb.pop_back(); //backtracking
     //not pick the element
     findallcombination(vec,i+1,tar,ans,comb);
