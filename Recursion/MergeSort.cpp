@@ -1,31 +1,32 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 class MergeSort{
     public:
-    void merge(int arr[],int st,int end){
+    void merge(vector<int>& arr,int st,int end){
         int mid=st+(end-st)/2;
-        int i=st,j=mid+1,k=0;
-        int temp[end-st+1]; 
+        int i=st,j=mid+1;
+        vector <int> temp;
         while(i<=mid && j<=end){
-            if(arr[i]<arr[j]){
-                temp[k++]=arr[i++];
+            if(arr[i]<=arr[j]){
+                temp.push_back(arr[i++]);
             }
             else{
-                temp[k++]=arr[j++];
+                temp.push_back(arr[j++]);
             }
         }
         while(i<=mid){
-            temp[k++]=arr[i++];
+            temp.push_back(arr[i++]);
         }
         while(j<=end){
-            temp[k++]=arr[j++];
+            temp.push_back(arr[j++]);
         }
-        for(int i=st;i<=end;i++){
-            arr[i]=temp[i-st];
+        for(int i=0;i<temp.size();i++){
+            arr[i+st]=temp[i];
         }
         
     }
-    void mergeSort(int arr[],int st,int end){
+    void mergeSort(vector<int>& arr,int st,int end){
         if(st>=end){
             return;
         }
@@ -40,7 +41,7 @@ int main(){
     int n;
     cout<<"Enter the size of the array: ";
     cin>>n; 
-    int arr[n];
+    vector<int> arr(n);
     cout<<"Enter the elements of the array: "<<endl;
     for(int i=0;i<n;i++){
         cin>>arr[i];
