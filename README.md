@@ -86,6 +86,9 @@ DSA-in-Cpp/
 | `sub_array` | Subarray generation |
 | `unique_element_array` | Find unique elements |
 | `smallest_largest_in_array` | Find smallest & largest element |
+| `linear_search_matrix` (01 & 02) | Linear search in a matrix |
+| `max_subarray_sum` | Maximum subarray sum |
+| `Search_in_2D_matrix_2` | Search in 2D matrix II |
 
 ---
 
@@ -159,9 +162,16 @@ DSA-in-Cpp/
 
 | File | Description |
 |---|---|
+| `Combination_sum` | Combination sum problem |
+| `Count_Inversion` | Count inversions using merge sort |
+| `Knight-Tour` | Knight's tour on a chessboard |
+| `MergeSort` | Merge sort using recursion |
+| `N-Queen` | N-Queens problem |
 | `Permutations` | Generate all permutations |
 | `Permutation02` | Alternative permutation approach |
 | `Print_subsets` | Print all subsets of a set |
+| `Rate-in-Maze` | Rat in a maze problem |
+| `Sudoku-Solver` | Sudoku solver problem |
 
 ---
 
@@ -212,6 +222,7 @@ DSA-in-Cpp/
 | `Bubble-sort` | Bubble sort |
 | `Selection-sort` | Selection sort |
 | `Insertion-sort` | Insertion sort |
+| `Merge-sort` | Merge sort algorithm |
 
 **Sorting Problems:**
 | File | Description |
