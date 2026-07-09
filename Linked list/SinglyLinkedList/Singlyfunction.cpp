@@ -56,6 +56,44 @@ class list{
         
     }
 
+    // Function to insert a new node at the given position in the linked list
+    void insert(int val,int pos){
+        if (head == NULL) {
+            if (pos == 0) {
+                push_front(val);
+            } 
+            else {
+                cout << "Invalid Position!" << endl;
+            }
+        return;
+        }
+
+        if(pos<0){
+            return ;
+        }
+
+        if(pos==0){
+            push_front(val);
+            return;
+        }
+        node* temp=head;
+        for(int i=0;i<pos-1;i++){
+            if (temp->next == NULL) {
+                cout << "Invalid Position!" << endl;
+                return;
+            }
+            temp=temp->next;
+        }
+
+        node* newNode= new node(val);
+        newNode->next=temp->next;
+        temp->next=newNode;
+        if (newNode->next == NULL) {
+        tail = newNode;
+        }
+
+    }
+
     // Function to delete a node from the beginning of the linked list
     void pop_front(){
         if(head==NULL){
@@ -112,6 +150,8 @@ int main(){
     ll.pop_front();
     ll.display();
     ll.pop_back();
+    ll.display();
+    ll.insert(1,0);
     ll.display();
     return 0;
 }
