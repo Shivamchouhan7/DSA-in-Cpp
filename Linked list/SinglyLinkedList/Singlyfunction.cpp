@@ -58,6 +58,24 @@ class list{
         temp->next=NULL;
         delete temp;
     }
+    // Function to delete a node from the end of the linked list
+    void pop_back(){
+        if(head==NULL){
+            return ;
+        }
+        if(head==tail){
+            delete head;
+            head=tail=NULL;
+            return;
+        }
+        node* temp=head;
+        while(temp->next!=tail){
+            temp=temp->next;
+        }
+        delete tail;
+        tail = temp;
+        tail->next = NULL;
+    }
 
     // To print entire linked list 
     void display(){
@@ -81,6 +99,8 @@ int main(){
     ll.push_back(4);
     ll.display();
     ll.pop_front();
+    ll.display();
+    ll.pop_back();
     ll.display();
     return 0;
 }
