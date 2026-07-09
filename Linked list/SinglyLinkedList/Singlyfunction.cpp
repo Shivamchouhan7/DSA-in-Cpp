@@ -45,6 +45,20 @@ class list{
         
     }
 
+    // Function to delete a node from the beginning of the linked list
+    void pop_front(){
+        if(head==NULL){
+            return ;
+        }
+        node* temp=head;
+        head=head->next; 
+
+        if(head==NULL) tail=NULL;
+
+        temp->next=NULL;
+        delete temp;
+    }
+
     // To print entire linked list 
     void display(){
         node* temp=head;
@@ -65,6 +79,8 @@ int main(){
     ll.push_front(1);
     ll.display();
     ll.push_back(4);
+    ll.display();
+    ll.pop_front();
     ll.display();
     return 0;
 }
