@@ -154,6 +154,10 @@ class list{
             }
             curr=curr->next;
         }
+        if(curr->next==NULL) {
+            cout << "Invalid Position" << endl;
+            return;
+        }
         temp=curr->next;
         curr->next=temp->next;
         if(temp==tail) tail=curr;
@@ -162,9 +166,13 @@ class list{
 
     // To print entire linked list 
     void display(){
+        if (head == NULL) {
+            cout << "List is empty." << endl;
+            return;
+        }
         node* temp=head;
         while(temp!=NULL){
-            cout<<temp->data<<"->";
+            cout<<temp->data<<" -> ";
             temp=temp->next;
         }
         cout << "NULL" << endl;
@@ -193,6 +201,19 @@ void search(int key) {
     cout << "Element not found." << endl;
 }
 
+    // Function to count nodes
+    void countNodes() {
+        int count = 0;
+        node *temp = head;
+
+        while (temp != NULL)
+        {
+            count++;
+            temp = temp->next;
+        }
+
+        cout<< "total nodes are : "<<count;
+    }
 };
 
 int main(){
@@ -213,5 +234,6 @@ int main(){
     ll.display();
     ll.search(2);
     ll.display();
+    ll.countNodes();
     return 0;
 }
