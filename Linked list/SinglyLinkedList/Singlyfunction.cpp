@@ -18,6 +18,17 @@ class list{
         head=tail=NULL;
     }
 
+    // Function to create Linked list
+    void createLinkedList(){
+        int n,val;
+        cout<<"Enter size of linked list : ";
+        cin>>n;
+        for(int i=0;i<n;i++){
+            cout<<"Enter value of node "<<i+1<<" : ";
+            cin>>val;
+            push_back(val);
+        }
+    }
     // Function to insert a new node at the beginning of the linked list
     void push_front(int val){
         node* newNode= new node(val);//DMA
