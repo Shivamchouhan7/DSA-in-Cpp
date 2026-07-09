@@ -202,7 +202,7 @@ void search(int key) {
 }
 
     // Function to count nodes
-    void countNodes() {
+    int countNodes() {
         int count = 0;
         node *temp = head;
 
@@ -212,28 +212,93 @@ void search(int key) {
             temp = temp->next;
         }
 
-        cout<< "total nodes are : "<<count;
+        return count;
     }
 };
 
-int main(){
+int main() {
     list ll;
-    ll.push_front(3);
-    ll.push_front(2);
-    ll.push_front(1);
-    ll.display();
-    ll.push_back(4);
-    ll.display();
-    ll.pop_front();
-    ll.display();
-    ll.pop_back();
-    ll.display();
-    ll.insert(1,0);
-    ll.display();
-    ll.deleteNode(2);
-    ll.display();
-    ll.search(2);
-    ll.display();
-    ll.countNodes();
+    int choice, val, pos, key;
+
+    do {
+        cout << "\n========== MENU ==========\n";
+        cout << "1. Create Linked List\n";
+        cout << "2. Insert at Beginning\n";
+        cout << "3. Insert at End\n";
+        cout << "4. Insert at Specific Position\n";
+        cout << "5. Delete from Beginning\n";
+        cout << "6. Delete from End\n";
+        cout << "7. Delete from Specific Position\n";
+        cout << "8. Display Linked List\n";
+        cout << "9. Search an Element\n";
+        cout << "10. Count Nodes\n";
+        cout << "11. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+
+        case 1:
+            ll.createLinkedList();
+            break;
+
+        case 2:
+            cout << "Enter value: ";
+            cin >> val;
+            ll.push_front(val);
+            break;
+
+        case 3:
+            cout << "Enter value: ";
+            cin >> val;
+            ll.push_back(val);
+            break;
+
+        case 4:
+            cout << "Enter value: ";
+            cin >> val;
+            cout << "Enter position: ";
+            cin >> pos;
+            ll.insert(val, pos);
+            break;
+
+        case 5:
+            ll.pop_front();
+            break;
+
+        case 6:
+            ll.pop_back();
+            break;
+
+        case 7:
+            cout << "Enter position: ";
+            cin >> pos;
+            ll.deleteNode(pos);
+            break;
+
+        case 8:
+            ll.display();
+            break;
+
+        case 9:
+            cout << "Enter element to search: ";
+            cin >> key;
+            ll.search(key);
+            break;
+
+        case 10:
+            cout << "Total Nodes = " << ll.countNodes() << endl;
+            break;
+
+        case 11:
+            cout << "Exiting Program..." << endl;
+            break;
+
+        default:
+            cout << "Invalid Choice!" << endl;
+        }
+
+    } while (choice != 11);
+
     return 0;
 }
