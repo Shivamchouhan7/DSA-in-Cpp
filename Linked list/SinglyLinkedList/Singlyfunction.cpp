@@ -170,6 +170,28 @@ class list{
         cout << "NULL" << endl;
     }
 
+    // Function to search an element in the linked list
+void search(int key) {
+    if (head == NULL) {
+        cout << "List is empty." << endl;
+        return;
+    }
+
+    node* temp = head;
+    int pos = 0;
+
+    while (temp != NULL) {
+        if (temp->data == key) {
+            cout << "Element found at position " << pos << endl;
+            return;
+        }
+
+        temp = temp->next;
+        pos++;
+    }
+
+    cout << "Element not found." << endl;
+}
 
 };
 
@@ -188,6 +210,8 @@ int main(){
     ll.insert(1,0);
     ll.display();
     ll.deleteNode(2);
+    ll.display();
+    ll.search(2);
     ll.display();
     return 0;
 }
