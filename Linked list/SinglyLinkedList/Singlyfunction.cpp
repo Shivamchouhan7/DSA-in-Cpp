@@ -125,6 +125,40 @@ class list{
         tail = temp;
         tail->next = NULL;
     }
+    // Function to delete a node from specific position from the linked list
+    void deleteNode(int pos){
+        node* temp;
+        node* curr=head;
+        if(head==NULL){
+            cout<<"List is empty"<<endl;
+            return;
+        }
+        if(pos<0){
+            cout<<"Invalid position"<<endl;
+            return;
+        }
+        if(pos==0){
+            if(head==tail){
+                delete head;
+                head=tail=NULL;
+                return;
+            }
+            head=head->next;
+            delete curr;
+            return;
+        }
+        for(int i=0;i<pos-1;i++ ){
+            if (curr == NULL || curr->next == NULL) {
+                cout << "Invalid Position" << endl;
+                return;
+            }
+            curr=curr->next;
+        }
+        temp=curr->next;
+        curr->next=temp->next;
+        if(temp==tail) tail=curr;
+        delete temp;
+    }
 
     // To print entire linked list 
     void display(){
@@ -152,6 +186,8 @@ int main(){
     ll.pop_back();
     ll.display();
     ll.insert(1,0);
+    ll.display();
+    ll.deleteNode(2);
     ll.display();
     return 0;
 }
