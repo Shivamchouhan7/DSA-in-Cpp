@@ -32,6 +32,15 @@ class list{
         }
     }
 
+    // To print entire linked list 
+    void display(){
+        node* temp=head;
+        while(temp!=NULL){
+            cout<<temp->data<<"->";
+            temp=temp->next;
+        }
+    }
+
 
 };
 
@@ -40,5 +49,6 @@ int main(){
     ll.push_front(3);
     ll.push_front(2);
     ll.push_front(1);
+    ll.display();
     return 0;
 }
